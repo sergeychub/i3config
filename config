@@ -56,7 +56,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
+bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
@@ -141,9 +141,9 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
+set $ws1 
+set $ws2 
+set $ws3 
 set $ws4 4
 set $ws5 5
 set $ws6 6
@@ -185,6 +185,13 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+exec google-chrome-stable
+exec spotify
+exec code
+
+assign [class="google-chrome"] $ws1
+assign [class="code-oss"] $ws2
+for_window [class="Spotify"] move to workspace $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
